@@ -4,7 +4,6 @@ exports[`app components render Header 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "rgb(200, 0, 0)",
       "color": "#fff",
       "padding": 10,
       "textAlign": "center",
@@ -90,10 +89,9 @@ exports[`app components render Place - Not random 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "rgba(255, 255, 255, 0.1)",
+      "backgroundColor": "rgba(255, 255, 255, 0.2)",
       "border": "none",
-      "borderRadius": 3,
-      "cursor": "pointer",
+      "borderRadius": 10,
       "margin": "auto",
       "marginBottom": 10,
       "maxWidth": 600,
@@ -104,13 +102,18 @@ exports[`app components render Place - Not random 1`] = `
 >
   <div
     onClick={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+      }
+    }
   >
     <div
       style={
         Object {
           "color": "#fff",
           "fontSize": 20,
-          "fontWeight": 600,
+          "fontWeight": 500,
           "padding": 3,
         }
       }
@@ -120,9 +123,9 @@ exports[`app components render Place - Not random 1`] = `
     <div
       style={
         Object {
-          "color": "rgba(255, 255, 255, 0.8)",
+          "color": "rgba(255, 255, 255, 1)",
           "fontSize": 14,
-          "fontWeight": 100,
+          "fontWeight": 500,
           "padding": 3,
         }
       }
@@ -134,9 +137,9 @@ exports[`app components render Place - Not random 1`] = `
     <div
       style={
         Object {
-          "color": "rgba(255, 255, 255, 0.8)",
+          "color": "rgba(255, 255, 255, 1)",
           "fontSize": 14,
-          "fontWeight": 100,
+          "fontWeight": 500,
           "padding": 3,
         }
       }
@@ -148,9 +151,9 @@ exports[`app components render Place - Not random 1`] = `
   <div
     style={
       Object {
-        "color": "rgba(255, 255, 255, 0.8)",
+        "color": "rgba(255, 255, 255, 1)",
         "fontSize": 14,
-        "fontWeight": 100,
+        "fontWeight": 500,
         "padding": 3,
       }
     }
@@ -171,9 +174,9 @@ exports[`app components render Place - Not random 1`] = `
   <div
     style={
       Object {
-        "color": "rgba(255, 255, 255, 0.8)",
+        "color": "rgba(255, 255, 255, 1)",
         "fontSize": 14,
-        "fontWeight": 100,
+        "fontWeight": 500,
         "padding": 3,
       }
     }
@@ -188,9 +191,9 @@ exports[`app components render Place - Random 1`] = `
   onClick={[Function]}
   style={
     Object {
-      "backgroundColor": "rgba(255, 255, 255, 0.1)",
+      "backgroundColor": "rgba(255, 255, 255, 0.2)",
       "border": "none",
-      "borderRadius": 3,
+      "borderRadius": 10,
       "cursor": "pointer",
       "height": 100,
       "margin": "auto",
@@ -202,21 +205,45 @@ exports[`app components render Place - Random 1`] = `
     }
   }
 >
-  <img
-    src="./random.png"
-    style={
-      Object {
-        "bottom": 0,
-        "height": 60,
-        "left": 0,
-        "margin": "auto",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
-        "width": 60,
+  <div
+    data-radium={true}
+  >
+    <img
+      data-radium={true}
+      src="./random.png"
+      style={
+        Object {
+          "animation": "x 2s",
+          "animationIterationCount": "infinite",
+          "animationName": "rubberBand-radium-animation-8ac73554",
+          "bottom": 0,
+          "height": 60,
+          "left": 0,
+          "margin": "auto",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": 60,
+        }
       }
-    }
-  />
+    />
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "@keyframes rubberBand-radium-animation-8ac73554 {
+from{transform: scale3d(1, 1, 1);}
+30%{transform: scale3d(1.25, 0.75, 1);}
+40%{transform: scale3d(0.75, 1.25, 1);}
+50%{transform: scale3d(1.15, 0.85, 1);}
+65%{transform: scale3d(0.95, 1.05, 1);}
+75%{transform: scale3d(1.05, 0.95, 1);}
+to{transform: scale3d(1, 1, 1);}
+}
+",
+        }
+      }
+    />
+  </div>
 </div>
 `;
 
@@ -224,7 +251,6 @@ exports[`app components render SearchBar 1`] = `
 <section
   style={
     Object {
-      "backgroundColor": "rgb(200, 0, 0)",
       "boxSizing": "border-box",
       "fontSize": 18,
       "padding": "0 8px 8px 8px",
@@ -278,7 +304,7 @@ exports[`app components render SearchBar 1`] = `
       style={
         Object {
           "border": "none",
-          "borderRadius": 2,
+          "borderRadius": 10,
           "boxSizing": "border-box",
           "fontSize": 15,
           "height": 30,
