@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app components render Header 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgb(200, 0, 0)",
+      "color": "#fff",
+      "padding": 10,
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "fontSize": 14,
+      }
+    }
+  >
+    what are you 
+  </div>
+  <div
+    style={
+      Object {
+        "fontSize": 25,
+        "fontWeight": 900,
+      }
+    }
+  >
+    <a
+      href="/"
+      style={
+        Object {
+          "color": "#fff",
+          "textDecoration": "none",
+        }
+      }
+    >
+      HUNGRY4
+    </a>
+  </div>
+</div>
+`;
+
+exports[`app components render Loading - fetching 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgba(0, 0, 0, 0.3)",
+      "height": "100%",
+      "position": "fixed",
+      "width": "100%",
+      "zIndex": 9,
+    }
+  }
+>
+  <img
+    alt="loading"
+    src="./loader.gif"
+    style={
+      Object {
+        "height": 50,
+        "left": 0,
+        "margin": "auto",
+        "position": "fixed",
+        "right": 0,
+        "top": "30%",
+        "width": 50,
+        "zIndex": 10,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`app components render Loading - not fetching 1`] = `null`;
+
+exports[`app components render MyMap 1`] = `
+<div
+  style={
+    Object {
+      "height": "300px",
+    }
+  }
+/>
+`;
+
+exports[`app components render Place - Not random 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.1)",
+      "border": "none",
+      "borderRadius": 3,
+      "cursor": "pointer",
+      "margin": "auto",
+      "marginBottom": 10,
+      "maxWidth": 600,
+      "padding": 3,
+      "width": "100%",
+    }
+  }
+>
+  <div
+    onClick={[Function]}
+  >
+    <div
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 20,
+          "fontWeight": 600,
+          "padding": 3,
+        }
+      }
+    >
+      Haco cafe 匣
+    </div>
+    <div
+      style={
+        Object {
+          "color": "rgba(255, 255, 255, 0.8)",
+          "fontSize": 14,
+          "fontWeight": 100,
+          "padding": 3,
+        }
+      }
+    >
+      代官山町19-1 (白磁館 2A)
+       
+      Shibuya, Tokyo
+    </div>
+    <div
+      style={
+        Object {
+          "color": "rgba(255, 255, 255, 0.8)",
+          "fontSize": 14,
+          "fontWeight": 100,
+          "padding": 3,
+        }
+      }
+    >
+      130
+      m
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "color": "rgba(255, 255, 255, 0.8)",
+        "fontSize": 14,
+        "fontWeight": 100,
+        "padding": 3,
+      }
+    }
+  >
+    <a
+      href="http://ameblo.jp/haco--cafe/"
+      style={
+        Object {
+          "color": "#c5e2ff",
+          "textDecoration": "underline",
+        }
+      }
+      target="blank"
+    >
+      http://ameblo.jp/haco--cafe/
+    </a>
+  </div>
+  <div
+    style={
+      Object {
+        "color": "rgba(255, 255, 255, 0.8)",
+        "fontSize": 14,
+        "fontWeight": 100,
+        "padding": 3,
+      }
+    }
+  >
+    +81 3-5428-5035
+  </div>
+</div>
+`;
+
+exports[`app components render Place - Random 1`] = `
+<div
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 0.1)",
+      "border": "none",
+      "borderRadius": 3,
+      "cursor": "pointer",
+      "height": 100,
+      "margin": "auto",
+      "marginBottom": 10,
+      "maxWidth": 600,
+      "padding": 3,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <img
+    src="./random.png"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 60,
+        "left": 0,
+        "margin": "auto",
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 60,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`app components render SearchBar 1`] = `
+<section
+  style={
+    Object {
+      "backgroundColor": "rgb(200, 0, 0)",
+      "boxSizing": "border-box",
+      "fontSize": 18,
+      "padding": "0 8px 8px 8px",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxWidth": 500,
+        "position": "relative",
+        "width": "100%",
+      }
+    }
+  >
+    <label
+      style={
+        Object {
+          "color": "#828282",
+          "left": 15,
+          "position": "absolute",
+          "top": 3,
+        }
+      }
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        preserveAspectRatio="xMidYMid meet"
+        style={
+          Object {
+            "color": undefined,
+            "verticalAlign": "middle",
+          }
+        }
+        viewBox="0 0 40 40"
+        width="1em"
+      >
+        <g>
+          <path
+            d="m27.2 18.6q0-4.2-2.9-7.1t-7.1-2.9-7 2.9-3 7.1 2.9 7 7.1 3 7.1-3 2.9-7z m11.4 18.5q0 1.2-0.8 2.1t-2 0.8q-1.2 0-2-0.8l-7.7-7.7q-4 2.8-8.9 2.8-3.2 0-6.1-1.3t-5-3.3-3.4-5-1.2-6.1 1.2-6.1 3.4-5.1 5-3.3 6.1-1.2 6.1 1.2 5 3.3 3.4 5.1 1.2 6.1q0 4.9-2.7 8.9l7.6 7.6q0.8 0.9 0.8 2z"
+          />
+        </g>
+      </svg>
+    </label>
+    <input
+      onChange={[Function]}
+      placeholder="Search"
+      style={
+        Object {
+          "border": "none",
+          "borderRadius": 2,
+          "boxSizing": "border-box",
+          "fontSize": 15,
+          "height": 30,
+          "outline": "none",
+          "paddingLeft": 40,
+          "paddingRight": 40,
+          "width": "100%",
+        }
+      }
+    />
+    <a
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "#828282",
+          "cursor": "pointer",
+          "position": "absolute",
+          "right": 15,
+          "top": 3,
+        }
+      }
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        preserveAspectRatio="xMidYMid meet"
+        style={
+          Object {
+            "color": undefined,
+            "verticalAlign": "middle",
+          }
+        }
+        viewBox="0 0 40 40"
+        width="1em"
+      >
+        <g>
+          <path
+            d="m28.6 25q0-0.5-0.4-1l-4-4 4-4q0.4-0.5 0.4-1 0-0.6-0.4-1.1l-2-2q-0.4-0.4-1-0.4-0.6 0-1 0.4l-4.1 4.1-4-4.1q-0.4-0.4-1-0.4-0.6 0-1 0.4l-2 2q-0.5 0.5-0.5 1.1 0 0.5 0.5 1l4 4-4 4q-0.5 0.5-0.5 1 0 0.7 0.5 1.1l2 2q0.4 0.4 1 0.4 0.6 0 1-0.4l4-4.1 4.1 4.1q0.4 0.4 1 0.4 0.6 0 1-0.4l2-2q0.4-0.4 0.4-1z m8.7-5q0 4.7-2.3 8.6t-6.3 6.2-8.6 2.3-8.6-2.3-6.2-6.2-2.3-8.6 2.3-8.6 6.2-6.2 8.6-2.3 8.6 2.3 6.3 6.2 2.3 8.6z"
+          />
+        </g>
+      </svg>
+    </a>
+  </div>
+</section>
+`;
