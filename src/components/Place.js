@@ -24,14 +24,14 @@ const style = {
 	title:{
 		padding: 3,
 		fontSize: 20,
-		fontWeight: 600,
+		fontWeight: 500,
 		color: '#fff'
 	},
 	childText:{
 		padding: 3,
 		fontSize: 14,
-		fontWeight: 100,
-		color: 'rgba(255, 255, 255, 0.8)'
+		fontWeight: 500,
+		color: 'rgba(255, 255, 255, 1)'
 	},
 	link:{
 		textDecoration: 'underline',
