@@ -30,7 +30,7 @@ const style = {
         left: 0,
         right: 0,
         top: 0,
-        paddingTop: '10%',
+        paddingTop: 20,
         margin: 'auto',
         position: 'fixed',
         zIndex: 10
