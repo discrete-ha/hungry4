@@ -18,7 +18,18 @@ const style = {
         height: '100%',
         zIndex: 9,
         backgroundColor: 'rgba(0, 0, 0, 0.3)'
+    },
+    loadingMessage:{
+        position: 'absolute',
+        top: '30%',
+        paddingTop: 50,
+        width: '100%',
+        height: 20,
+        textAlign: 'center',
+        color: '#fff',
+        fontSize: 20
     }
+    
 }
 
 export class Loading extends React.Component {
@@ -28,6 +39,7 @@ export class Loading extends React.Component {
             return (
                 <div style={style.loadingWrapper}>
                     <img alt='loading' style={style.loadingImage}src="./loader.gif"/>
+                    <div style={style.loadingMessage}>{this.props.loadingMessage}</div>
                 </div>
             );
 
@@ -37,7 +49,8 @@ export class Loading extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-    	isFetching: state.isFetching
+    	isFetching: state.isFetching,
+        loadingMessage: state.loadingMessage
     };
 }
 
