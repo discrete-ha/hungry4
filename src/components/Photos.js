@@ -38,6 +38,11 @@ const style = {
 }
 
 export class Photos extends React.Component {
+    
+    constructor(props){
+       super(props);
+       this.showImageGallery = this.showImageGallery.bind(this);
+    }
 
     showImageGallery(index){
         this.props.setImageGallery(index);
@@ -48,7 +53,7 @@ export class Photos extends React.Component {
         if (showImageIndex !== null) {
             return (
                 <div>
-                    <div style={style.galleryScreen} onClick={this.showImageGallery.bind(this, null)}></div>
+                    <div style={style.galleryScreen} onClick={() => this.showImageGallery(null)}></div>
                     <div style={style.galleryWrapper}>
                         <ImageGallery startIndex={showImageIndex} items={this.props.photos}/>
                     </div>
@@ -61,7 +66,7 @@ export class Photos extends React.Component {
     renderPhoto(){
         return this.props.photos.map((photo, index)=>{
             return <img key={index} alt='place photos' src={photo.thumbnail} style={style.thumbs} 
-            onClick={this.showImageGallery.bind(this, index)} />
+            onClick={() => this.showImageGallery(index)} />
         });
     }
 

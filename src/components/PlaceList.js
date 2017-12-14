@@ -18,6 +18,10 @@ const style = {
 
 export class PlaceList extends React.Component {
 
+	constructor(props){
+       super(props);
+    }
+
     render(){
     	if (this.props.placeList.length > 0) {
 
@@ -28,7 +32,7 @@ export class PlaceList extends React.Component {
 						<Place place={place} isRandom={false}/>
 					</div>
 				</StyleRoot>)
-			}.bind(this));
+			});
 
 			return (<div style={style.wrapper}>
 				{placeListElement}
