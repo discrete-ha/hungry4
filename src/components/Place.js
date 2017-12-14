@@ -124,9 +124,14 @@ export class Place extends React.Component {
 	}
 
 	showNextRandom(){
-		return (<div style={style.nextWapper}>
+		if (this.props.isRandom && this.props.showingPlace ===  RANDOM_ITEM_ID) {
+			return (<div style={style.nextWapper}>
 				<ArrowCircleRight style={style.nextIcon}  onClick={this.showRandomPlace}/>
-			</div>);
+			</div>);	
+		}else{
+			return null;
+		}
+		
 	}
 
     render(){
