@@ -7,6 +7,7 @@ import Foursquare from '../services/Foursquare';
 import Photos from './Photos';
 import { rubberBand , fadeIn} from 'react-animations'
 import Radium, {StyleRoot} from 'radium';
+import ArrowCircleRight from 'react-icons/lib/fa/arrow-circle-right';
 
 let RANDOM_ITEM_ID = 'randomitem';
 
@@ -70,6 +71,17 @@ const style = {
     placeDetail:{
     	animation: 'x 1s',
 		animationName: Radium.keyframes(fadeIn, 'fadeIn'),
+    },
+    nextWapper:{
+    	position: 'relative'
+    },
+    nextIcon:{
+    	position: 'absolute',
+    	top:10,
+    	right:10,
+    	color: '#fff',
+    	fontSize: 30,
+    	cursor: 'pointer'
     }
 }
 
@@ -111,6 +123,12 @@ export class Place extends React.Component {
 		}
 	}
 
+	showNextRandom(){
+		return (<div style={style.nextWapper}>
+				<ArrowCircleRight style={style.nextIcon}  onClick={this.showRandomPlace}/>
+			</div>);
+	}
+
     render(){
         let link = null;
         let place = this.props.isRandom ? this.props.randomPlace : this.props.place;
@@ -148,6 +166,7 @@ export class Place extends React.Component {
 			}
 
 		    return (<div style={style.placeWrapper}>
+		    		{this.showNextRandom()}
 			    	<div style={{cursor: 'pointer'}} onClick={()=>this.showDetail(place.id)}>
 				    	<div style={style.title}>{place.name}</div>
 				    	<div style={style.childText}>{place.location.formattedAddress[0]} {place.location.formattedAddress[1]}</div>
