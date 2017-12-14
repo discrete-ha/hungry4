@@ -75,6 +75,12 @@ const style = {
 
 export class Place extends React.Component {
 
+    constructor(props){
+       super(props);
+       this.showRandomPlace = this.showRandomPlace.bind(this);
+       this.showDetail = this.showDetail.bind(this);
+    }
+
 	showRandomPlace(){
 		let places = this.props.randomList;
 		let randIndex = Math.floor( (Math.random() * (places.length - 1) ) );
@@ -110,7 +116,7 @@ export class Place extends React.Component {
         let place = this.props.isRandom ? this.props.randomPlace : this.props.place;
 
         if (this.props.isRandom && this.props.showingPlace !==  RANDOM_ITEM_ID) {
-        	return <div style={{...style.placeWrapper, ...style.randomWrapper}} onClick={this.showRandomPlace.bind(this)}>
+        	return <div style={{...style.placeWrapper, ...style.randomWrapper}} onClick={this.showRandomPlace}>
         			<StyleRoot>
 						<img style={style.img} src="./random.png" />
 					</StyleRoot>
@@ -123,7 +129,6 @@ export class Place extends React.Component {
 			}
 
 			if ( placeDetail[place.id] && ( this.props.showingPlace === place.id || this.props.showingPlace ===  RANDOM_ITEM_ID ) ) {
-				console.log('placeDetail',placeDetail);
 				placeDetailElement = (
 					<StyleRoot>
 						<div style={style.placeDetail}>
@@ -143,7 +148,7 @@ export class Place extends React.Component {
 			}
 
 		    return (<div style={style.placeWrapper}>
-			    	<div style={{cursor: 'pointer'}} onClick={this.showDetail.bind(this, place.id)}>
+			    	<div style={{cursor: 'pointer'}} onClick={()=>this.showDetail(place.id)}>
 				    	<div style={style.title}>{place.name}</div>
 				    	<div style={style.childText}>{place.location.formattedAddress[0]} {place.location.formattedAddress[1]}</div>
 				    	<div style={style.childText}>{place.location.distance}m</div>

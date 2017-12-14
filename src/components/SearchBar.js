@@ -42,6 +42,8 @@ export class SearchBar extends React.Component {
 	constructor(props){
        super(props);
        this.timeout = 0;
+       this.clearText = this.clearText.bind(this);
+       this.handleSearchText = this.handleSearchText.bind(this);
     }
 
 	handleSearchText(event){
@@ -55,7 +57,7 @@ export class SearchBar extends React.Component {
 			if ( this.props.searchText !== searchText && searchText.length > 0 ){
 				this.props.setSearchText(searchText);
 			}else if(searchText.length === 0){
-				this.props.setPlaceList([]);
+				this.clearText();
 			}
 
 	    }, 500);
@@ -68,14 +70,21 @@ export class SearchBar extends React.Component {
 		this.props.setPlaceList([]);
 	}
 
+	renderClearButton(){
+		if (this.refs.searchInput && this.refs.searchInput.value.length > 0)
+			return <a onClick={this.clearText} style={{...style.icon, right:15, cursor: 'pointer'}}><FaSearchClear /></a>;
+
+		return null;
+	}
+
 	render(){
 		return (<section style={style.section}>
 					<div style={style.searchWrapper}>
 						<label style={{...style.icon,left:15}}>
 							<FaSearch />
 						</label>
-						<input placeholder="Search" style={style.input} ref="searchInput" onChange={this.handleSearchText.bind(this)}/>
-						<a onClick={this.clearText.bind(this)} style={{...style.icon, right:15, cursor: 'pointer'}}><FaSearchClear /></a>
+						<input placeholder="Search" style={style.input} ref="searchInput" onChange={this.handleSearchText}/>
+						{this.renderClearButton()}
 					</div>
 				</section>);
 	}
