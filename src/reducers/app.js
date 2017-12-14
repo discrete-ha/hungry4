@@ -1,11 +1,12 @@
-import { SET_FETCHING } from '../actions/system';
+import { SET_FETCHING, SET_LOADING_MESSAGE } from '../actions/system';
 import { SET_SEARCH_TEXT, 
     SET_PLACE_LIST, 
     SET_DETAIL_PLACE, 
     SET_SHOWING_PLACE, 
     SET_RANDOM_LIST, 
     SET_RANDOM_PLACE,
-    SET_IMAGE_GALLERY 
+    SET_IMAGE_GALLERY,
+    SET_COORDINATE
 } from '../actions/place';
 
 
@@ -17,13 +18,19 @@ const appInitialState = {
     placeDetail:{},
     randomPlace:null,
     showingPlace:null,
-    showImageIndex:null
+    showImageIndex:null,
+    coordinate:null,
+    loadingMessage:''
 };
 
 const reducer = (state = appInitialState, action) => {
     switch(action.type) {
         case SET_FETCHING:
-            return {...state, isFetching: action.payload};
+            if (action.payload) {
+                return {...state, isFetching: action.payload};    
+            }else{
+                return {...state, loadingMessage:'' , isFetching: action.payload};
+            }
         case SET_SEARCH_TEXT:
             return {...state, searchText: action.payload};
         case SET_PLACE_LIST:
@@ -38,6 +45,10 @@ const reducer = (state = appInitialState, action) => {
             return {...state, randomPlace: action.payload};
         case SET_IMAGE_GALLERY:
             return {...state, showImageIndex: action.payload};
+        case SET_COORDINATE:
+            return {...state, coordinate: action.payload};
+        case SET_LOADING_MESSAGE:
+            return {...state, loadingMessage: action.payload};
         default:
             return state;
     }

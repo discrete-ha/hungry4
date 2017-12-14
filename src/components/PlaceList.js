@@ -18,10 +18,6 @@ const style = {
 
 export class PlaceList extends React.Component {
 
-	constructor(props){
-       super(props);
-    }
-
     render(){
     	if (this.props.placeList.length > 0) {
 

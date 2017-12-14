@@ -70,6 +70,20 @@ exports[`app components render Loading - fetching 1`] = `
       }
     }
   />
+  <div
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 20,
+        "height": 20,
+        "paddingTop": 50,
+        "position": "absolute",
+        "textAlign": "center",
+        "top": "30%",
+        "width": "100%",
+      }
+    }
+  />
 </div>
 `;
 

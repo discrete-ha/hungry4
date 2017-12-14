@@ -5,6 +5,7 @@ export const SET_SHOWING_PLACE = 'SET_SHOWING_PLACE';
 export const SET_RANDOM_LIST = 'SET_RANDOM_LIST';
 export const SET_RANDOM_PLACE = 'SET_RANDOM_PLACE';
 export const SET_IMAGE_GALLERY = 'SET_IMAGE_GALLERY';
+export const SET_COORDINATE = 'SET_COORDINATE';
 
 export function setSearchText(text) {
     return {
@@ -52,5 +53,12 @@ export function setImageGallery(data) {
     return {
         type: SET_IMAGE_GALLERY,
         payload: data
+    };
+}
+
+export function setCoordinate(ll) {
+    return {
+        type: SET_COORDINATE,
+        payload: ll
     };
 }

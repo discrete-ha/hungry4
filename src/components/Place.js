@@ -106,7 +106,7 @@ export class Place extends React.Component {
 
 	getPlaceDetail(placeId){
 		this.props.setFetching(true);
-	    Foursquare.getPlaceDetail(placeId, (venue)=>{
+	    Foursquare.getPlaceDetail(this.props.coordinate, placeId, (venue)=>{
 			this.props.setDetailPlace(venue);
 	        this.props.setFetching(false);
 		});
@@ -191,7 +191,8 @@ let mapStateToProps = (state) => {
     	placeDetail: state.placeDetail,
     	showingPlace: state.showingPlace,
     	randomList: state.randomList,
-    	randomPlace: state.randomPlace
+    	randomPlace: state.randomPlace,
+    	coordinate: state.coordinate
     };
 }
 

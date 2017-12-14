@@ -1,11 +1,6 @@
 import config from '../config';
 let foursquare = require('react-foursquare')(config.foursquare);
 
-let commonParams = {
-    "ll": "35.648795,139.702237",
-    "radius": 1000
-  }
-
 class Foursquare {
 
   makeVenueForm = (rawData) => {
@@ -43,12 +38,13 @@ class Foursquare {
     return ret;
   };
 
-  getRandomPlace = (callback) => {
+  getRandomPlace = (ll, callback) => {
     let params = {
-      ...commonParams,
-      "intent":"browse",
-      "limit": 50,
-      "section":"food"
+      ll: ll,
+      radius: 1000,
+      intent:"browse",
+      limit: 50,
+      section:"food"
     };
 
     foursquare.venues.explore(params)
@@ -61,12 +57,13 @@ class Foursquare {
       });
   };
 
-  searchPlace = (searchText, callback) => {
+  searchPlace = (ll, searchText, callback) => {
     var params = {
-      ...commonParams,
-      "intent": "browse",
-      "limit": 10,
-      "query": searchText
+      ll: ll,
+      radius: 1000,
+      intent: "browse",
+      limit: 10,
+      query: searchText
     };
 
     foursquare.venues.getVenues(params)
@@ -79,9 +76,9 @@ class Foursquare {
     });
   };
 
-  getPlaceDetail = (placeId, callback) =>{
+  getPlaceDetail = (ll, placeId, callback) =>{
       var params = {
-        ...commonParams,
+        ll: ll,
         venue_id: placeId
       };
 
