@@ -11,9 +11,6 @@ This app is only available on [Chrome](https://www.google.com/chrome/index.html)
 ### Keyword Search
 <img width="300" alt="random" src="https://user-images.githubusercontent.com/4373428/33794304-6999391e-dd0c-11e7-92be-4d8691b69e92.gif">
 
-## Demo
-[Demo](http://hungry4.s3-website-ap-northeast-1.amazonaws.com/)
-
 ## Prerequisites
 
 You will need [Node](http://nodejs.org/) and [NPM](https://npmjs.org/) installed on your environment.
