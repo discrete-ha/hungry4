@@ -75,8 +75,6 @@ $ npm run deploy
 
 ## Author
 * **John Ha** 
-[Resume](https://drive.google.com/open?id=0B6f4DTfeSkVCby0tT1JRRjI5MTQ)
-[linkedin](https://www.linkedin.com/in/jeong-hoon-ha-5b5870a3/)
-[github](https://github.com/discreteb)
+
 
 
